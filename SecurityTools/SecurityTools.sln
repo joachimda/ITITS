@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashingToolkit", "HashingTo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashingToolkit.Test", "HashingToolkit.Test\HashingToolkit.Test.csproj", "{564210BD-D946-488F-B37A-AC9D7CDA88AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security.Web", "Security.Web\Security.Web.csproj", "{4D45A995-B10E-454A-91FC-BE51D19A35DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{564210BD-D946-488F-B37A-AC9D7CDA88AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{564210BD-D946-488F-B37A-AC9D7CDA88AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{564210BD-D946-488F-B37A-AC9D7CDA88AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D45A995-B10E-454A-91FC-BE51D19A35DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D45A995-B10E-454A-91FC-BE51D19A35DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D45A995-B10E-454A-91FC-BE51D19A35DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D45A995-B10E-454A-91FC-BE51D19A35DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -55,6 +55,11 @@ namespace MvcMovie.Controllers
         [HttpPost]
         public IActionResult Encrypt(string inputPlain, string algorithm)
         {
+            string pub;
+            string pubPri;
+            AssymetricKeyEncryptor.GenerateKeyPair(2048, out pub, out pubPri);
+            string text = "EncryptMePlease!";
+
             ViewData["md5Raw"] = inputPlain;
             return Encryption();
         }
