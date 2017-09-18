@@ -1,16 +1,15 @@
-﻿using System;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 using System.Text;
 
 namespace HashingToolkit
 {
     public class HashifierSha1 : BaseHashifier, IHashifier
     {
-        public string GetHash(string element, bool useSalt)
+        public string GetHash(string element, string salt = "")
         {
-            if (useSalt)
+            if (!string.IsNullOrWhiteSpace(salt))
             {
-                element += new Random().Next(1000, int.MaxValue).ToString();
+                element += salt;
             }
 
             var hasher = SHA1.Create();

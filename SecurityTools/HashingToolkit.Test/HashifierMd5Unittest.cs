@@ -10,7 +10,7 @@ namespace HashingToolkit.Test
         public void GetHash_GivenValue_ReturnsHash()
         {
             const string expected = "174A0279AEBED83EF82204B1C1D7767D";
-            var result = _uut.GetHash("bjorni", false);
+            var result = _uut.GetHash("bjorni");
             Assert.Equal(expected, result);
         }
 
@@ -18,8 +18,8 @@ namespace HashingToolkit.Test
         public void GetHash_UsingSalt_DoesNotReturnVersionWithoutSalt()
         {
             const string value = "bjorni";  
-            var noSalt = _uut.GetHash(value, false);
-            var result = _uut.GetHash(value, true);
+            var noSalt = _uut.GetHash(value);
+            var result = _uut.GetHash(value, "hello salty");
 
             Assert.NotEqual(noSalt, result);
         }
