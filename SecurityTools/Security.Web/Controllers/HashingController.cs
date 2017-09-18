@@ -10,14 +10,7 @@ namespace Security.Web.Controllers
         {
             var viewModel = new HashingViewModel
             {
-                Algorithms = new List<string>
-                {
-                    "MD5",
-                    "SHA1",
-                    "SHA256",
-                    "SHA384",
-                    "SHA512"
-                }
+                Algorithms = new List<string> { "MD5", "SHA1", "SHA256", "SHA384", "SHA512" }
             };
 
             return View(viewModel);
@@ -25,8 +18,7 @@ namespace Security.Web.Controllers
 
         public void GenerateHash(HashingViewModel hvm)
         {
-            var a = hvm.CipherText;
-            var b = hvm.PlainText;
+            var selectedAlgorithm = hvm.SelectedAlgorithm;
         }
     }
 }
