@@ -13,5 +13,15 @@ namespace HashingToolkit.Test
             var result = _uut.GetHash("bjorni", false);
             Assert.Equal(expected, result);
         }
+
+        [Fact]
+        public void GetHash_UsingSalt_DoesNotReturnVersionWithoutSalt()
+        {
+            const string value = "bjorni";  
+            var noSalt = _uut.GetHash(value, false);
+            var result = _uut.GetHash(value, true);
+
+            Assert.NotEqual(noSalt, result);
+        }
     }
 }
