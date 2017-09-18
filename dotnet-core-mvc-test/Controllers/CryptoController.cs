@@ -6,10 +6,6 @@ namespace MvcMovie.Controllers
 {
     public class CryptoController : Controller
     {
-        public CryptoController()
-        {
-            
-        }
 
         // 
         // GET: /Crypto/
