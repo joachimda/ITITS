@@ -17,7 +17,7 @@ namespace Security.Web.ViewModels
         [Display(Name = "Algorithme Selection")]
         public List<string> Algorithms { get; set; }
 
-        [Display(Name = "Use salt?")]
+        [Display(Name = "Salt")]
         public string Salt { get; set; }
     }
 }

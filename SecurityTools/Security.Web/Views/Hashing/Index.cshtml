@@ -8,14 +8,34 @@
 <h2>Hashing Toolkit</h2>
 
 <form asp-controller="Hashing" asp-action="GenerateHash" method="post">
+    
     <label asp-for="SelectedAlgorithm"></label>
-    <br/>
-    <select asp-for="@Model.SelectedAlgorithm" 
+    <br />
+    <select asp-for="@Model.SelectedAlgorithm"
             asp-items="@(new SelectList(Model.Algorithms))">
         <option>Please select one</option>
     </select>
+    <br />
+    <br />
+
+    <label asp-for="PlainText"></label>
+    <br />
+    <textarea asp-for="PlainText"></textarea>
     <br/>
     <br/>
+    
+    <label asp-for="Salt"></label>
+    <br/>
+    <input asp-for="Salt"/> 
+    <br/>
+    <br/>
+    
+    <label asp-for="CipherText"></label>
+    <br/>
+    <textarea asp-for="CipherText" readonly="readonly"></textarea>
+    <br />
+    <br />
+
     <button type="submit"> Hashify!</button>
 </form>
 
