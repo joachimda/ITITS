@@ -4,7 +4,7 @@ namespace HashingToolkit.Test
 {
     public class HashifierMd5Unittest
     {
-        private readonly HashifierMd5 _uut = new HashifierMd5();
+        private readonly HashingAlgorithmeMd5 _uut = new HashingAlgorithmeMd5();
         
         [Fact]
         public void GetHash_GivenValue_ReturnsHash()

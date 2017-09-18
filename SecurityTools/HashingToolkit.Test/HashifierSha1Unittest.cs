@@ -4,7 +4,7 @@ namespace HashingToolkit.Test
 {
     public class HashifierSha1Unittest
     {
-        private readonly HashifierSha1 _uut = new HashifierSha1();
+        private readonly HashingAlgorithmeSha1 _uut = new HashingAlgorithmeSha1();
         
         [Fact]
         public void GetHash_GivenValue_ReturnsHash()

@@ -2,7 +2,7 @@
 
 namespace HashingToolkit
 {
-    public class BaseHashifier
+    public class BaseHashingAlgorithme
     {
         public string ByteArrayToString(byte[] array)
         {

@@ -4,7 +4,7 @@ namespace HashingToolkit.Test
 {
     public class HashifierSha256Unittest
     {
-        private readonly HashifierSha256 _uut = new HashifierSha256();
+        private readonly HashingAlgorithmeSha256 _uut = new HashingAlgorithmeSha256();
         
         [Fact]
         public void GetHash_GivenValue_ReturnsHash()

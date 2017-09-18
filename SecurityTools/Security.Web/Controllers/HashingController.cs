@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using HashingToolkit;
 using Microsoft.AspNetCore.Mvc;
 using Security.Web.ViewModels;
 
@@ -6,10 +7,16 @@ namespace Security.Web.Controllers
 {
     public class HashingController : Controller
     {
+        private readonly IHashifier _hashifier;
+
+        public HashingController(IHashifier hashifier)
+        {
+            _hashifier = hashifier;
+        }
+
         public IActionResult Index()
         {
             var viewModel = CreateHashingViewModel();
-
             return View(viewModel);
         }
 
@@ -23,9 +30,9 @@ namespace Security.Web.Controllers
 
         public IActionResult GenerateHash(HashingViewModel model)
         {
-            // Get values here
+            var hash = _hashifier.Hashify(model.SelectedAlgorithm, model.PlainText, model.Salt);
             model = CreateHashingViewModel();
-            model.CipherText = "Derp herp oij oij";
+            model.CipherText = hash;
             return View(nameof(Index), model);
         }
     }
