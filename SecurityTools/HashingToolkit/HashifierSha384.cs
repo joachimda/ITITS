@@ -5,7 +5,7 @@ namespace HashingToolkit
 {
     public class HashifierSha384 : BaseHashifier, IHashifier
     {
-        public string GetHash(string element)
+        public string GetHash(string element, bool useSalt)
         {
             var hasher = SHA384.Create();
             var bytes = Encoding.ASCII.GetBytes(element);

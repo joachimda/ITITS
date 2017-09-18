@@ -2,6 +2,6 @@
 {
     public interface IHashifier
     {
-        string GetHash(string element);
+        string GetHash(string element, bool useSalt);
     }
 }

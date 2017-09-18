@@ -15,7 +15,7 @@ namespace HashingToolkit.Test
                                     "df1cfe68cf9bf29aeb3b917ec3f94" +
                                     "0fb082c234ea";
 
-            var result = _uut.GetHash("bjorni");
+            var result = _uut.GetHash("bjorni", false);
             Assert.Equal(expected.ToUpper(), result);
         }
     }

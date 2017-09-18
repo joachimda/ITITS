@@ -10,7 +10,7 @@ namespace HashingToolkit.Test
         public void GetHash_GivenValue_ReturnsHash()
         {
             const string expected = "174A0279AEBED83EF82204B1C1D7767D";
-            var result = _uut.GetHash("bjorni");
+            var result = _uut.GetHash("bjorni", false);
             Assert.Equal(expected, result);
         }
     }

@@ -5,7 +5,7 @@ namespace HashingToolkit
 {
     public class HashifierMd5 : BaseHashifier, IHashifier
     {
-        public string GetHash(string element)
+        public string GetHash(string element, bool useSalt)
         {
             var hasher = MD5.Create();
             var bytes = Encoding.ASCII.GetBytes(element);
