@@ -2,14 +2,14 @@ using Xunit;
 
 namespace HashingToolkit.Test
 {
-    public class HashifierMd5Unittest
+    public class HashifierSha1Unittest
     {
-        private readonly HashifierMd5 _uut = new HashifierMd5();
+        private readonly HashifierSha1 _uut = new HashifierSha1();
         
         [Fact]
         public void GetHash_GivenValue_ReturnsHash()
         {
-            const string expected = "174A0279AEBED83EF82204B1C1D7767D";
+            const string expected = "E2A6D9392CC3EEFC751D29E3593D96648E6B9C28";
             var result = _uut.GetHash("bjorni");
             Assert.Equal(expected, result);
         }
