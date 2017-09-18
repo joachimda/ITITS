@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Hashing";
+}
+
+<h1>Hashing engine</h1>
+
+@using (Html.BeginForm())
+{
+    <select>
+        @foreach (var i in (ViewData["algos"] as IEnumerable<string>))
+            {
+                <option name="alg">@Html.DisplayFor(x => i)</option>
+            }
+            
+    </select>
+}
+
+<form action="/Crypto/Hash" method="post">
+    <input type="text" name="inputMd5Plain"/>
+    <input type="submit" value="Submit"/>    
+
+</form>
+
+ 

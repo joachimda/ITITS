@@ -1,0 +1,23 @@
+@{
+    ViewData["Title"] = "Encryption";
+}
+
+<h1>Encryption engine</h1>
+
+
+<form action="/Crypto/Encrypt" method="post">
+    <select>
+        @foreach(var i in (ViewData["algos"] as IEnumerable<string>))
+            {
+                <option id="selectedAlgo" name="algorithm"> @i </option>
+            }
+    </select>
+
+<input type="text" name="inputPlain"/>
+<input type="submit" value="Submit">
+
+</form>
+
+
+
+ 
