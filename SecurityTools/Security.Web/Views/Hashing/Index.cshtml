@@ -1,8 +1,15 @@
-﻿@model object
+﻿@model Security.Web.ViewModels.HashingViewModel
 
 @{
     ViewBag.Title = "title";
     Layout = "_Layout";
 }
 
-<h2>title</h2>
+<h2>Hashing Toolkit</h2>
+
+<form asp-controller="Hashing" asp-action="GenerateHash" method="post">
+    Select algorithm:
+    <input asp-for="@Model.Algorithms"/>
+    <button type="submit"> Hashify!</button>
+</form>
+
