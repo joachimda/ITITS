@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Security.Web.ViewModels;
 
@@ -8,17 +9,25 @@ namespace Security.Web.Controllers
     {
         public IActionResult Index()
         {
-            var viewModel = new HashingViewModel
-            {
-                Algorithms = new List<string> { "MD5", "SHA1", "SHA256", "SHA384", "SHA512" }
-            };
+            var viewModel = CreateHashingViewModel();
 
             return View(viewModel);
         }
 
-        public void GenerateHash(HashingViewModel model)
+        private static HashingViewModel CreateHashingViewModel()
         {
-            var selectedAlgorithm = model.SelectedAlgorithm;
+            return new HashingViewModel
+            {
+                Algorithms = new List<string> { "MD5", "SHA1", "SHA256", "SHA384", "SHA512" }
+            };
+        }
+
+        public IActionResult GenerateHash(HashingViewModel model)
+        {
+            // Get values here
+            model = CreateHashingViewModel();
+            model.CipherText = "Derp herp oij oij";
+            return View(nameof(Index), model);
         }
     }
 }
