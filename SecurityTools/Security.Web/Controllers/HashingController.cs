@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
 using Security.Web.ViewModels;
 
 namespace Security.Web.Controllers
@@ -7,15 +8,25 @@ namespace Security.Web.Controllers
     {
         public IActionResult Index()
         {
-            return View();
-        }
+            var viewModel = new HashingViewModel
+            {
+                Algorithms = new List<string>
+                {
+                    "MD5",
+                    "SHA1",
+                    "SHA256",
+                    "SHA384",
+                    "SHA512"
+                }
+            };
 
+            return View(viewModel);
+        }
 
         public void GenerateHash(HashingViewModel hvm)
         {
             var a = hvm.CipherText;
             var b = hvm.PlainText;
-
         }
     }
 }

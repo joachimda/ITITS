@@ -9,7 +9,10 @@
 
 <form asp-controller="Hashing" asp-action="GenerateHash" method="post">
     Select algorithm:
-    <input asp-for="@Model.Algorithms"/>
+    <select asp-for="@Model.SelectedAlgorithm" asp-items="@(new SelectList(Model.Algorithms))">
+        <option>Please select one</option>
+    </select>
+
     <button type="submit"> Hashify!</button>
 </form>
 
