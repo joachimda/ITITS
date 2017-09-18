@@ -16,9 +16,9 @@ namespace Security.Web.Controllers
             return View(viewModel);
         }
 
-        public void GenerateHash(HashingViewModel hvm)
+        public void GenerateHash(HashingViewModel model)
         {
-            var selectedAlgorithm = hvm.SelectedAlgorithm;
+            var selectedAlgorithm = model.SelectedAlgorithm;
         }
     }
 }
